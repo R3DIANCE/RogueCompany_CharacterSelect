@@ -34,7 +34,7 @@ y := ""
 
 Gui, -Resize -MaximizeBox
 Gui, Add, DropDownList, x1 y3 w298 vCharacter gCharacterSelect, Select a character and hold F1 at the character selection||Anvil|Chaac|Dallas|Dima|Phantom|Ronin|Saint|Trench|Gl1tch|Lancer|Scorch|Talon|Vy
-Gui, Add, DropDownList, x1 y30 w298 vGamemode, Demolition||Strikeout
+Gui, Add, DropDownList, x1 y30 w298 vGamemode gGamemodeSelect, Demolition||Strikeout
 Gui, Show, xCenter yCenter h52 w300 NoActivate, Rogue Character Bot
 
 F1::
@@ -120,6 +120,10 @@ if (Character = "Anvil"){
 		y = 400			
 	}
 }
+return
+
+GamemodeSelect:
+Gui, Submit, NoHide
 return
 
 GuiClose:
