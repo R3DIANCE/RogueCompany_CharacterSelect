@@ -2,26 +2,41 @@
 #Persistent
 #NoEnv
 
-; Ronin			: x845 	y280
-; Phantom		: x710 	y280
-; Trench		: x420 	y415
-; Saint			: x135 	y425
-; Chaac			: x280 	y270
-; Talon			: x280 	y415
-; Anvil			: x140 	y280
-; Dallas		: x425 	y280 
-; Gl1tch		: x550 	y425
-; Dima			: x570 	y280
-; Lancer		: x700 	y415
-; Scorch		: x850 	y425
-; Vy			: x140	y540
+; TODO SELECT MODE ASSAULT OR DEMOLITION
+
+; Demo
+; Saint			: x150 	y400
+; Trench		: x280 	y400
+; Gl1tch		: x420 	y400
+; Lancer		: x560	y400
+; Scorch		: x700 	y400
+; Talon			: x850 	y400
+
+; Asssault
+; Saint			: x150 	y400
+; Talon			: x280 	y400
+; Trench		: x420 	y400
+; Gl1tch		: x560 	y400
+; Lancer		: x700	y400
+; Scorch		: x850 	y400
+
+
+; Both
+; Anvil			: x140 	y250
+; Chaac			: x280 	y250
+; Dallas		: x425 	y250
+; Dima			: x570 	y250
+; Phantom		: x710 	y250
+; Ronin			: x845 	y250
+; Vy			: x150	y550
 ; Lock		 	: x1250	y840
+
 
 x := ""
 y := ""
 
 Gui, -Resize -MaximizeBox
-Gui, Add, DropDownList, x1 y3 w298 vCharacter gCharacterSelect, Select a character and hold F1 at the character selection||Anvil|Chaac|Dallas|Dima|Phantom|Ronin|Saint|Talon|Trench|Gl1tch|Lancer|Scorch|Vy
+Gui, Add, DropDownList, x1 y3 w298 vCharacter gCharacterSelect, Select a character and hold F1 at the character selection||Anvil|Chaac|Dallas|Dima|Phantom|Ronin|Saint|Trench|Gl1tch|Lancer|Scorch|Talon|Vy
 Gui, Show, xCenter yCenter h25 w300 NoActivate, Rogue Character Bot
 
 F1::
@@ -44,43 +59,43 @@ CharacterSelect:
 Gui, Submit, NoHide
 if (Character = "Ronin"){
 	x = 845
-	y = 280
+	y = 250
 } else if (Character = "Phantom") {
 	x = 710
-	y = 280
+	y = 250
 } else if (Character = "Trench") {
-	x = 420
-	y = 415
+	x = 280
+	y = 400
 } else if (Character = "Saint") {
-	x = 135
-	y = 425
+	x = 150
+	y = 400
 } else if (Character = "Chaac") {
 	x = 280
-	y = 270
+	y = 250
 } else if (Character = "Talon") {
-	x = 280
-	y = 415
+	x = 850
+	y = 400
 } else if (Character = "Anvil") {
 	x = 140
-	y = 280
+	y = 250
 } else if (Character = "Dallas") {
 	x = 425
-	y = 280
+	y = 250
 } else if (Character = "Dima") {
 	x = 570
-	y = 280
+	y = 250
 } else if (Character = "Gl1tch") {
-	x = 550
-	y = 425
+	x = 420
+	y = 400
 } else if (Character = "Lancer") {
-	x = 700
-	y = 415
+	x = 560
+	y = 400
 } else if (Character = "Scorch") {
-	x = 850
-	y = 425
+	x = 700
+	y = 400
 } else if (Character = "Vy") {
-	x = 140
-	y = 540
+	x = 150
+	y = 550
 }
 return
 
